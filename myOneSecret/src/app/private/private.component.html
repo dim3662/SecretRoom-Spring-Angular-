@@ -1,0 +1,103 @@
+<!--Link of your secret: <br>
+<input (click)="select()" readonly="readonly" type="text"
+       value="link"  [(ngModel)]="currentURL" size="100px">-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Secret room</title>
+</head>
+<body>
+
+<div class="section">
+
+  <div id="page-wraper">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <a href="http://localhost:4200/"> <img src="../../assets/img/logo2.png" class="logo" alt="Secret room"></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <h1 class="header-text">
+            <strong> Поделится этой ссылкой:</strong>
+
+          </h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="form1">
+            <input (click)="select()" class="link" readonly="readonly" type="text"
+                   value="link" id="link" [(ngModel)]="currentURL" placeholder="link" autocomplete="off" required/>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <h1 class="header-text">
+            <strong> Секрет</strong>
+            <p class="lead">(Вы увидете это только один раз)</p>
+
+          </h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="form2">
+            <input type="text" class="notAllowed" readonly="readonly" name="name" placeholder="Текст"
+                   [(ngModel)]="responce?.message.message" autocomplete="off" required/>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <h1 class="header2-text">
+            <strong>Истекает через:  {{responce?.lifetime}}</strong>
+
+
+          </h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <hr>
+          <h1 class="header-text">
+            <strong> Отправить ссылку по почте:</strong>
+          </h1>
+          <form>
+          <div class="formEmail">
+            <input type="text" name="name" placeholder="Введите email получателя"  [(ngModel)]="emailBox.email" autocomplete="off" required/>
+          </div>
+          <button type (click)="sendEmail()" class="button hvr-grow shadow">Отправить</button>
+          </form>
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <hr>
+          <button (click)="delete()" class="button hvr-grow shadow">Сжечь этот секрет</button>
+          <hr>
+          <p class="text3">* Сожжение тайны удалит её до прочтения (щёлкните здесь, чтоыб подтвердить).</p>
+          <hr>
+          <button (click)="goHome()" class="button1 hvr-grow shadow">Создать новый секрет</button>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
+

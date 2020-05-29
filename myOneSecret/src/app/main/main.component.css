@@ -1,0 +1,185 @@
+.header-text  {
+
+  font-size: 20px;
+  line-height: 1.5;
+  text-align:center;
+}
+
+
+.header-text strong  {
+  display: block;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+
+
+.lead {
+  color: #ffffff;
+
+
+}
+
+.form1  {
+  margin-top:30px;
+  height:245px;
+  width: 100%;
+  position:relative;
+  overflow:hidden;
+  margin-bottom: 20px;
+}
+
+
+.form1 input {
+  width: 100%;
+  height: 230px;
+  color: #053f38;
+  padding-bottom: 185px;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  padding-left: 10px;
+  background: #ffffff;
+  font-size: 18px;
+  font-color: black;
+
+}
+
+.placeholder {
+  font-size: 20px;
+  color: black;
+}
+
+
+.form1 label {
+  position: absolute;
+  bottom: 200px;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  color:black;
+  pointer-events: none;
+  border-bottom: 1px solid white;
+
+}
+
+.form1 label::after{
+  content: "" ;
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  height:100%;
+  width: 100%;
+  border-bottom: 3px solid green;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+
+}
+
+.content-name {
+  position: absolute;
+  bottom:5px;
+  left:0px;
+  transition: all 0.3s ease;
+}
+
+
+.form1 input:focus + .label-name .content-name,
+.form1 input:valid + .label-name .content-name{
+  transform: translateY(-150%);
+  color:  green;
+}
+
+.form1 input:focus + .label-name::after,
+.form1 input:valid + .label-name::after{
+  transform: translateX(0%);
+}
+
+
+
+.title {
+  position: absolute;
+  right:  620px;
+  left:  10px;
+  bottom: 90px;
+  margin-bottom: 10px;
+  color: white;
+  font-family: Arial;
+
+}
+.text1 {
+  position: absolute;
+  color:white;
+  top:53px;
+  right:460px;
+}
+.text2 {
+  position: absolute;
+  color:white;
+  right: 460px;
+  top:99px;
+
+}
+
+
+.form2 {
+  border: 5px solid transparent;
+  border-image: linear-gradient(to right, transparent 0%, white 100%);
+  border-image-slice: 1;
+  height: 160px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form-input2 {
+  height: 30px;
+  margin-top:10px;
+  margin-bottom: 30px;
+  width: 58%;
+  position: absolute;
+  right: 20px;
+  top:40px;
+
+
+}
+
+
+.btn{
+  position: absolute;
+  right: 20px;
+  bottom: 25px;
+  height:30px;
+  width: 58%;
+  background-color:white;
+  border: none;
+  padding-top:3px;
+}
+
+
+.form-btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #e8321c
+
+}
+.button {
+  display: inline-block;
+  position: center;
+  padding: 15px;
+  margin: 2px;
+  width: 100%;
+  margin-bottom: 15px;
+  text-decoration: none;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  border-radius: 7px;
+}
+button,
+button:active,
+button:focus {
+  outline: none;
+}

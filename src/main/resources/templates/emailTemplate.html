@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:remove="all">Template for HTML email with inline image</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style> body {
+        background: black;
+    }
+
+    .form2 {
+        background: black;
+        margin-top: 5px;
+        margin-left: 100px;
+        height: 90px;
+        width: 720px;
+        border-radius: 15px;
+    }
+
+    .form2 input {
+        background: white;
+        height: 20px;
+        margin-top:30px;
+        margin-left: 30px;
+        margin-bottom: 5px;
+        width: 650px;
+        position: absolute;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        border-radius: 7px;
+        padding-left: 10px;
+        border: none;
+        outline: none;
+        font-size: 14px;
+        font-color: black;
+    }
+
+    </style>
+</head>
+
+<body>
+<div class="form2">
+    <input th:attr="value=${link}" type="text" class="notAllowed" readonly="readonly" name="name" placeholder="Текст"
+           autocomplete="off" required/>
+</div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!--<form (ngSubmit)="onSubmit()">
+  Your text:
+  &lt;!&ndash;[(ngModel)]="secret.message"&ndash;&gt;<textarea #text name="secret"></textarea><br>
+  Password for text:
+  <input type="text" [(ngModel)]="secret.password" name="password"><br>
+  Lifetime:
+  <select [(ngModel)]="secret.lifetime" name="lifetime">
+    <option>1</option>
+    <option>5</option>
+    <option>10</option>
+    <option>30</option>
+  </select>
+  minutes<br>
+  <button *ngIf="text.value.length!=0">Create link on secret</button>
+  {{responce}}
+</form>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Secret room</title>
+
+</head>
+<body>
+
+<div class="section">
+
+  <div id="page-wraper">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <a href="http://localhost:4200/"> <img src="../../assets/img/logo2.png" class="logo" alt="Secret room"></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <h1 class="header-text">
+            <strong> Вставьте пароль, логин, секротное сообщение или частную ссылку ниже.</strong>
+            <p class="lead">Не пропускайте важную и ценную информацию в беседы и эл-почту.</p>
+          </h1>
+        </div>
+      </div>
+
+
+      <form>
+        <div class="row">
+          <div class="col-lg-8 offset-lg-2">
+            <div class="form1">
+              <input [(ngModel)]="secret.message" #text name="message" type="text"
+                     placeholder="Напиши свой сeкрет сюда..." autocomplete="off" required/>
+              <label class="label-name">
+                <span class="content-name"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8 offset-lg-2">
+            <div class="form2">
+
+
+              <p class="text1">Кодовая фраза:</p>
+              <p class="text2">Lifetime:</p>
+              <p class="title">Настройки приватности</p>
+              <input type="text" [(ngModel)]="secret.password" name="password" class="form-control input-lg form-input2"
+                     placeholder="Кодовое слово или фраза">
+              <select [(ngModel)]="secret.lifetime" name="lifetime" class="btn" id="selectID">
+                <option value="7 дней">7 дней</option>
+                <option value="1 день">1 день</option>
+                <option value="12 часов">12 часов</option>
+                <option value="3 часа">3 часа</option>
+                <option value="1 час">1 час</option>
+                <option value="30 минут">30 минут</option>
+                <option value="15 минут">15 минут</option>
+              </select>
+
+            </div>
+
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col-lg-8 offset-lg-2">
+            <!--*ngIf="text.value.length!=0"-->  <button *ngIf="text.value.length!=0" (click)="onSubmit()" class="button hvr-grow shadow">Создать ссылку на
+              секрет
+            </button>
+            <button (click)="generatePassword()" class="button hvr-grow shadow">Или сгенерировать одноразовый пароль</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+
